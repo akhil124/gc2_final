@@ -21,7 +21,7 @@
 
 ****Code Flow****
 
-**Defined gRPC service**: Creating a .proto file that defines the gRPC service and the message types for request and response.
+
 
 **Implement GroupServer**: Creating a GroupServer class that manages groups internally using methods CreateGroup and FreeGroup.
 

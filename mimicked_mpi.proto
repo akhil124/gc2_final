@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package mimicked_mpi;
+
+service GroupService {
+    rpc CreateGroup (CreateGroupRequest) returns (CreateGroupResponse);
+    rpc FreeGroup (FreeGroupRequest) returns (FreeGroupResponse);
+}
+
+message CreateGroupRequest {
+    int32 comm_rank = 1;
+    repeated int32 ranks = 2;
+}
+
+message CreateGroupResponse {
+    int32 group_id = 1;
+}
+
+message FreeGroupRequest {
+    int32 group_id = 1;
+}
+
+message FreeGroupResponse {
+    bool success = 1;
+}
